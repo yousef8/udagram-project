@@ -5,7 +5,8 @@
         "install:frontend": "cd udagram-frontend && npm install",
         "build:api": "cd udagram-api && npm run build",
         "build:frontend": "cd udagram-frontend && npm run build",
-        "test:frontend": "cd udagram-frontend && npm run test && npm run e2e"
+        "test:frontend": "cd udagram-frontend && npm run test && npm run e2e",
+        "deploy:frontend": "cd udagram-frontend && chmod +x ./bin/deploy.sh && ./bin/deploy.sh"
     },
     "devDependencies": {}
 }
