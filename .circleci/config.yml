@@ -10,6 +10,7 @@ jobs:
       - checkout
       - aws-cli/install
       - aws-cli/setup
+      - eb/setup
       - run:
           name: Install backend dependencies
           command: npm run install:api
@@ -25,12 +26,6 @@ jobs:
       - run:
           name: Deploy frontend
           command: npm run deploy:frontend
-  eb/deploy:
-    environment-name: Udagramapp-env
-workflows:
-  Deployment_Workflow:
-    jobs:
-      - build
-      - eb/deploy:
-          requires:
-            - build
+      - run:
+          name: Deploy backend
+          command: eb deploy Udagramapp-env
