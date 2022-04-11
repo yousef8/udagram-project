@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   aws-cli: circleci/aws-cli@3.0.0
+  eb: circleci/aws-elastic-beanstalk@2.0.1
 jobs:
   build:
     docker:
@@ -10,11 +11,26 @@ jobs:
       - aws-cli/install
       - aws-cli/setup
       - run:
+          name: Install backend dependencies
+          command: npm run install:api
+      - run:
           name: Install frontend dependencies
           command: npm run install:frontend
+      - run:
+          name: Build backend
+          command: npm run build:api
       - run:
           name: Build frontend
           command: npm run build:frontend
       - run:
           name: Deploy frontend
           command: npm run deploy:frontend
+  eb/deploy:
+    environment-name: Udagramapp-env
+workflows:
+  Deployment_Workflow:
+    jobs:
+      - build
+      - eb/deploy:
+          requires:
+            - build
