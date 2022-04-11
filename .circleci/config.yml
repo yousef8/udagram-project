@@ -28,4 +28,4 @@ jobs:
       - run:
           name: Deploy backend
           command: |
-            eb deploy --staged
+            eb deploy Udagramapp-env
