@@ -59,3 +59,11 @@ Here I will include screenshots for the the three AWS services used in deploying
 - Image showed below contains CircleCI project environment variables
 
 ![circleci](./assets/images/env_var/circleci.png)
+
+## Infrastructure Diagram
+
+![AWS infrastructure](./assets/images/diagrams/aws_diagram.jpg)
+
+## Pipeline Diagram
+
+![pipeline Diagram](./assets/images/diagrams/pipeline_diagram.jpg)
