@@ -21,7 +21,7 @@ jobs:
           command: eb init udagram-app -p node.js-16 -r $AWS_DEFAULT_REGION
       - run:
           name: Passing environment variables
-          command: eb setenv TEST=$TEST
+          command: eb setenv TEST=\$TEST
       - run:
           command: cat ./.elasticbeanstalk/config.yml
       - run:
