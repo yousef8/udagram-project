@@ -11,17 +11,18 @@ jobs:
       - aws-cli/setup
       - eb/setup
       - run:
-          name: Install backend dependencies
-          command: npm run install:api
-      - run:
-          name: Build backend
-          command: npm run build:api
-      - run:
           name: Initialize the Elastic Beanstalk
           command: eb init udagram-app -p node.js-16 -r $AWS_DEFAULT_REGION
       - run:
           name: Passing environment variables
-          command: eb setenv TEST=\$TEST
+          command: eb setenv TEST=$TEST
+      - run:
+          name: Build backend
+          command: npm run build:api
+      - run:
+          name: Install backend dependencies
+          command: npm run install:api
+
       - run:
           command: cat ./.elasticbeanstalk/config.yml
       - run:
