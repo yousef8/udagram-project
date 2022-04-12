@@ -31,8 +31,8 @@ You can see the site Deployed and working correctly from this [Link](http://udag
 
 Screenshots for the last build
 
-![last builds](./assets/images/build/udagram-project.png)
-![last build details](./assets/images/build/last_build_detaile.png)
+![last builds](./images/build/udagram-project.png)
+![last build details](./images/build/last_build_detaile.png)
 
 ## AWS services status
 
@@ -40,30 +40,30 @@ Here I will include screenshots for the the three AWS services used in deploying
 
 - RDS
 
-![RDS database](./assets/images/aws/rds.png)
+![RDS database](./images/aws/rds.png)
 
 - ElasticBeanstalk
 
-![EB](./assets/images/aws/eb.png)
+![EB](./images/aws/eb.png)
 
 - s3
 
-![s3](./assets/images/aws/s3.png)
+![s3](./images/aws/s3.png)
 
 ## Environment variables
 
 - Image showed below contains Elastic Beanstalk environment variables
 
-![eb environment variable](./assets/images/env_var/eb_env_var.png)
+![eb environment variable](./images/env_var/eb_env_var.png)
 
 - Image showed below contains CircleCI project environment variables
 
-![circleci](./assets/images/env_var/circleci.png)
+![circleci](./images/env_var/circleci.png)
 
 ## Infrastructure Diagram
 
-![AWS infrastructure](./assets/images/diagrams/aws_diagram.jpg)
+![AWS infrastructure](./images/diagrams/aws_diagram.jpg)
 
 ## Pipeline Diagram
 
-![pipeline Diagram](./assets/images/diagrams/pipeline_diagram.jpg)
+![pipeline Diagram](./images/diagrams/pipeline_diagram.jpg)
