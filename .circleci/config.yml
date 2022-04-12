@@ -26,6 +26,11 @@ jobs:
           name: Deploy frontend
           command: npm run deploy:frontend
       - run:
+          name: Initialize the Elastic Beanstalk
+          command: eb init udagram-app -p node.js-16
+      - run:
+          command: cat ./.elasticbeanstalk/config.yml
+      - run:
           name: Deploy backend
           command: |
             eb deploy Udagramapp-env
