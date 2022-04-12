@@ -18,7 +18,7 @@ jobs:
           command: npm run build:api
       - run:
           name: Initialize the Elastic Beanstalk
-          command: eb init udagram-app -p node.js-16 -r
+          command: eb init udagram-app -p node.js-16 -r $AWS_DEFAULT_REGION
       - run:
           name: Passing environment variables
           command: eb setenv $TEST
