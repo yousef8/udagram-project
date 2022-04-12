@@ -14,20 +14,20 @@ jobs:
           name: Install backend dependencies
           command: npm run install:api
       - run:
-          name: Install frontend dependencies
-          command: npm run install:frontend
-      - run:
           name: Build backend
           command: npm run build:api
       - run:
           name: Initialize the Elastic Beanstalk
-          command: eb init udagram-app -p node.js-16 -r $AWS_DEFAULT_REGION
+          command: eb init udagram-app -p node.js-16 -r $AWS_DEFAULT_REGION $TEST
       - run:
           command: cat ./.elasticbeanstalk/config.yml
       - run:
           name: Deploy backend
           command: |
             eb deploy Udagramapp-env
+      - run:
+          name: Install frontend dependencies
+          command: npm run install:frontend
       - run:
           name: Build frontend
           command: npm run build:frontend
