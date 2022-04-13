@@ -12,7 +12,7 @@ The code used in this project is a starter code.
 
 ## Demo-Preview
 
-You can see the site Deployed and working correctly from this [Link](http://udagramfrontend.s3-website-us-east-1.amazonaws.com/home).
+You can see the site Deployed and working correctly from this [Link](http://udagramfrontend.s3-website-us-east-1.amazonaws.com).
 
 ## Prerequist
 
@@ -32,7 +32,7 @@ You can see the site Deployed and working correctly from this [Link](http://udag
 Screenshots for the last build
 
 ![last builds](./images/build/udagram-project.png)
-![last build details](./images/build/last_build_detaile.png)
+![last build details](./images/build/last_build_details.png)
 
 ## AWS services status
 
@@ -52,13 +52,15 @@ Here I will include screenshots for the the three AWS services used in deploying
 
 ## Environment variables
 
+- Image showed below contains CircleCI project environment variables
+
+![circleci](./images/env_var/circleci.png)
+
 - Image showed below contains Elastic Beanstalk environment variables
 
 ![eb environment variable](./images/env_var/eb_env_var.png)
 
-- Image showed below contains CircleCI project environment variables
 
-![circleci](./images/env_var/circleci.png)
 
 ## Infrastructure Diagram
 
