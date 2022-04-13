@@ -1,15 +1,28 @@
+# We use the latest version of CircleCI
 version: 2.1
+# We state in orbs section some packeages that we will need to be installed on our excutar so we can deploy project
 orbs:
+  # Please notice that in this step we are just telling CircleCI what packegs we will use but it will not install them
+  # We will do that later in jobs
   aws-cli: circleci/aws-cli@3.0.0
   eb: circleci/aws-elastic-beanstalk@2.0.1
 jobs:
+  # As we have only one job we will called "build" cause CircleCI if didn't find a job with name "build" will need a workflow to tell it what to do
   build:
+    # The excutar is simply the type of OS we will use to make CI/CD pipeline on.
+    # our options is a linux or windows or MacOS or Docker image
+    # we will use a docker image here
+    # Our docker image here comes with node.js v16.14 the lates stable release of node.js preinstalled
     docker:
       - image: cimg/node:16.14.2
     steps:
+      # checkout => fetched the code from github repository
       - checkout
+      # Install and setup aws cli
       - aws-cli/setup
+      # Install and setup eb cli
       - eb/setup
+      # The rest of commands have a name that tells what it does
       - run:
           name: Install frontend dependencies
           command: npm run install:frontend
